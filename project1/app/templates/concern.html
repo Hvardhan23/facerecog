@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Health Concern</title>
+    <!-- Add your CSS stylesheets or inline styles here -->
+</head>
+<body>
+    <h1>Mental Health Concern</h1>
+    <form method="post" action="{% url 'concern' %}">
+        {% csrf_token %}
+        <label for="employee_name">Employee Name:</label>
+        <input type="text" id="employee_name" name="employee_name" required><br><br>
+        <label for="employee_id">Employee ID:</label>
+        <input type="text" id="employee_id" name="employee_id" required><br><br>
+        <label for="concern_title">Concern Title:</label>
+        <input type="text" id="concern_title" name="concern_title" required><br><br>
+        <label for="concern_description">Concern Description:</label>
+        <textarea id="concern_description" name="concern_description" rows="5" required></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
